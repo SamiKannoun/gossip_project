@@ -1,0 +1,12 @@
+<h1>Page d'accueil</h1>
+
+
+<% Gossip.all.each do |gossip| %>
+  <div class = "gossip"> 
+    <p><%=User.all.find_by(id: gossip.user_id).first_name%> <%=User.all.find_by(id: gossip.user_id).last_name%></p>
+    <p><%= gossip.title%> </p>
+    
+  </div>
+<% end %>
+
+
